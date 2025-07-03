@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/CYELLOW.png">
+  <title>Galaxy Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Fira+Code&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+ 
+  <!-- 🌌 Loading Animation -->
+  <div class="page-loader active" id="pageLoader">
+    <div class="loader-container">
+      <div class="dot dot1"></div>
+      <div class="dot dot2"></div>
+      <div class="dot dot3"></div>
+    </div>
+  </div>
+<header>
+  <!-- ⭐ Fixed Social Buttons -->
+  <div class="social-buttons">
+    <button onclick="window.open('https://github.com/cerine-guerra', '_blank')">
+      <i class="fab fa-github"></i>
+    </button>
+    <button onclick="window.open('https://www.linkedin.com/in/cerine-guerra', '_blank')">
+      <i class="fab fa-linkedin-in"></i>
+    </button>
+    <button onclick="window.open('https://t.me/Cerine_gr', '_blank')">
+      <i class="fab fa-telegram"></i>
+    </button>
+    <button onclick="window.open('mailto:cerineguerra@gmail.com', '_blank')">
+      <i class="fas fa-envelope"></i>
+    </button>
+  </div>
+
+  <div class="logo-button" id="logoBtn">
+    <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+      <path d="M261.3,64C141.2,64,72,167.4,72,256s69.2,192,189.3,192c106.5,0,187.7-86.7,187.7-192
+            c0-38.3-30.9-76-75.6-76s-65.5,36.7-65.5,76s-27.8,58.7-57.2,58.7S192,294.5,192,256s38.3-64,69.3-64s67.7-22.9,67.7-68
+            S309.2,64,261.3,64z" />
+    </svg>
+  </div>
+
+      <!-- Navigation Bar -->
+  <div class="top-nav">
+    <div class="nav-buttons">
+        <button>Home</button>
+        <button onclick="document.getElementById('about').scrollIntoView()">About</button>
+        <button>Projects</button>
+        <button>Skills</button>
+        <button>Contact</button>
+    </div>
+      <button class="resume-button">Resume</button>
+  </div>
+
+</header>
+
+  <!-- 🌠 Main Page Content -->
+  <div class="page-content">
+   
+    <section class="main-section">
+      <div class="setup">
+        <img src="images/setup.png" />
+      </div>
+
+      <div class="intro">
+        <p class="intro-greeting">Hola! I'm</p>
+        <h1 class="name">Cerine Guerra</h1>
+        <pre class="role-text" id="roleText"></pre>
+      </div>
+    </section>
+
+    <!-- 🧠 About Section -->
+    <section id="about" class="about-section">
+      <h2>About Me</h2>
+      <p>
+        I'm Cerine, a passionate developer who loves creating aesthetic, functional web and mobile experiences. I blend creativity with code, aiming to make things that feel both beautiful and meaningful.
+      </p>
+    </section>
+
+  </div>
+
+  <!-- 🌌 Star Canvas -->
+  <canvas></canvas>
+
+  <!-- 📜 Script -->
+  <script src="function.js"></script>
+</body>
+</html>
