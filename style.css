@@ -29,6 +29,27 @@ canvas {
   z-index: -1;
 }
 
+.gradient-clouds {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -3;
+
+  background: radial-gradient(
+    circle at 90% 90%,               /* Position: bottom-right */
+    rgba(255, 105, 235, 0.15) 0%,    /* Pink start */
+    rgba(235, 169, 46, 0.1) 40%,      /* Orange fade */
+    transparent 70%                  /* Fade out */
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
 /* 🔗 Developer Credit Link */
 a {
   position: absolute;
@@ -277,7 +298,7 @@ a:hover {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: #1e1e2f;
+  background-color: transparent;
   border: none;
   color: white;
   font-size: 20px;
@@ -296,25 +317,162 @@ a:hover {
   box-shadow: 0 0 12px gold, 0 0 24px gold;
 }
 
-/* 👩‍💻 About Section */
+/* about me section */
 .about-section {
-  padding: 100px 20px;
-  position: relative;
-  background-color: transparent;
-  color: white;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background: transparent; 
+  padding-top: 100px;
 }
 
-.about-section h2 {
-  font-size: 32px;
-  color: #fdd835;
-  margin-bottom: 20px;
-}
-
-.about-section p {
-  font-size: 18px;
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  background-color: #eeee57; 
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 0 #32142e;
   max-width: 600px;
-  margin: 0 auto;
+  margin-left: 160px;
+}
+
+.about-image {
+  position: absolute;
+  margin-left: -190px;
+  margin-top: -370px; 
+  z-index: 2; 
+  border-radius: 30px;
+  border: 5px solid #f477bd;
+  background-color: #f477bd;
+box-shadow: 10px 10px 0 rgba(50, 20, 46, 0.5);;
+}
+
+.about-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 40px;
+  background-color: #f477bd;
+}
+
+.about-text {
+  flex: 1;
+  text-align: center;
+  font-family: 'Fira Code', monospace;
+  color: #1a1a1a;
+}
+
+.about-text h2 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2a004f;
+}
+
+.about-text p {
+  font-size: 19.5px;
+  margin-top: 0;
+  line-height: 1.7;
+}
+
+.highlight {
+  color: #c92883; /* pink accent */
+  font-weight: bold;
+}
+
+/*my hobbies*/
+.hobbies-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 80px;
+  flex-direction: column;
+  align-items: start;
+  margin: 50px auto 0 auto;
+} 
+.hobbies-code-block {
+  gap: 30px;
+  background-color: rgba(0, 0, 0, 0.7); /* dark code-like bg */
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  text-align: left;
+  box-shadow: 5px 5px 0 rgba(50, 20, 46, 0.3);
+  overflow-x: auto;
+}
+
+.hobbies-code-block code {
+  display: block;
+  white-space: pre-wrap;
   line-height: 1.6;
-  color: #e0dede;
+}
+
+.hobbies-code-block pre,
+.hobbies-code-block code {
+  margin: 0;
+  padding: 0;
+  white-space: pre; /* keep formatting but no wrapping */
+}
+
+.comment { color: #6c757d; font-style: italic; }
+.var { color: #c792ea; }
+.property { color: #82aaff; }
+.key { color: #ffcb6b; }
+.string { color: #c3e88d; }
+
+/* my quote*/
+.quote-box {
+  margin-top: 40px;
+  position: relative;
+  max-width: 400px;
+  padding: 30px 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.05); /* transparent glass look */
+  color: #ffffff;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.hobbies-code-block,
+.quote-box {
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+.quote-mark {
+  position: absolute;
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.15);
+  font-family: 'Georgia', serif;
+  pointer-events: none;
+}
+
+.quote-mark.top {
+  top: -20px;
+  left: -10px;
+}
+
+.quote-mark.bottom {
+  bottom: -52px;
+  right: -10px;
+}
+@media (max-width: 768px) {
+  .hobbies-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }

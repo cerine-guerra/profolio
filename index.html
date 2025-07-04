@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/CYELLOW.png">
-  <title>Galaxy Portfolio</title>
+  <title>Cerine Guerra</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Fira+Code&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -52,7 +52,7 @@
       <!-- Navigation Bar -->
   <div class="top-nav">
     <div class="nav-buttons">
-        <button>Home</button>
+        <button onclick="document.getElementById('main-section').scrollIntoView()">Home</button>
         <button onclick="document.getElementById('about').scrollIntoView()">About</button>
         <button>Projects</button>
         <button>Skills</button>
@@ -62,11 +62,13 @@
   </div>
 
 </header>
+<div class="gradient-clouds"></div>
+
 
   <!-- 🌠 Main Page Content -->
   <div class="page-content">
    
-    <section class="main-section">
+    <section id="main-section" class="main-section">
       <div class="setup">
         <img src="images/setup.png" />
       </div>
@@ -80,10 +82,44 @@
 
     <!-- 🧠 About Section -->
     <section id="about" class="about-section">
-      <h2>About Me</h2>
-      <p>
-        I'm Cerine, a passionate developer who loves creating aesthetic, functional web and mobile experiences. I blend creativity with code, aiming to make things that feel both beautiful and meaningful.
-      </p>
+      <div class="about-container">
+        <div class="about-image">
+          <img src="images/photo.png" alt="Cerine Guerra" />
+        </div>
+
+        <div class="about-text">
+          <h2>💫 Know About Me</h2>
+          <p>
+            Hola! I'm <span class="highlight">Cerine Guerra</span> from Boumerdès, Algeria,
+            currently pursuing my license degree at the Institute of Electronics
+            and Electrical Engineering.<br />
+            Since <span class="highlight">2021</span>, I've been a self-taught developer,
+            passionate about both web development and mobile app development. 
+            I love bringing ideas to life through clean, creative code and user-centered design.
+          </p>
+        </div>
+      </div>
+
+        <div class="hobbies-container">
+          <div class="hobbies-code-block">
+             <pre><code><span class="comment">/* My Non-Tech Hobbies */
+</span><span class="var">I</span>.<span class="property">enjoy</span> = {
+<span class="key">crafts</span>: <span class="string">"handmade stuff"</span>,
+<span class="key">drawing</span>: <span class="string">"portraits"</span>,
+<span class="key">reading</span>: <span class="string">"autobiographies"</span>,
+<span class="key">writing</span>: <span class="string">"journals"</span>,
+<span class="key">gaming</span>: <span class="string">"open-world games"</span>
+};</code></pre>
+          </div>
+
+          <div class="quote-box">
+            <span class="quote-mark top">“</span>
+            <p>I code with the same hands that craft, draw, and write — creativity is the thread that weaves it all together.</p>
+            <span class="quote-mark bottom">”</span>
+           </div>
+
+        </div>
+     
     </section>
 
   </div>
